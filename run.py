@@ -353,7 +353,7 @@ def argLoader():
     # Learning Parameters
     parser.add_argument('--prob_src', type=float, default=0.1)
     parser.add_argument('--prob_tgt', type=float, default=0.9)
-    parser.add_argument('--lRate', type=float, default=4e-5)
+    parser.add_argument('--lRate', type=float, default=2e-5)
     parser.add_argument('--pad_idx', type=int, default=0)
     parser.add_argument('--label_smoothing', type=float, default=0.1)
     parser.add_argument('--batch_size', type=int, default=8)
