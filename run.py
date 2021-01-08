@@ -356,7 +356,7 @@ def argLoader():
     parser.add_argument('--lRate', type=float, default=4e-5)
     parser.add_argument('--pad_idx', type=int, default=0)
     parser.add_argument('--label_smoothing', type=float, default=0.1)
-    parser.add_argument('--batch_size', type=int, default=32)
+    parser.add_argument('--batch_size', type=int, default=8)
 
     # Network Parameters
     parser.add_argument('--n_layers', type=int, default=12)
@@ -396,7 +396,7 @@ def argLoader():
     parser.add_argument('--reranking_method', type=str, default='none')
 
     parser.add_argument('--beam_size', type=int, default=10)
-    parser.add_argument('--cands_limit', type=int, default=5000000)
+    parser.add_argument('--cands_limit', type=int, default=100000)
     parser.add_argument('--answer_size', type=int, default=10)
     parser.add_argument('--gen_max_len', type=int, default=50)
     parser.add_argument('--gamma_value', type=float, default=14.0)
