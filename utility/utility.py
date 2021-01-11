@@ -343,6 +343,9 @@ def format_(x, y):
 
 
 def mapping_tokenize(s, t):
+
+    print(s)
+    print(t)
     st = 0
     ed = 0
     mapping = []
@@ -350,12 +353,13 @@ def mapping_tokenize(s, t):
     for idx, token in enumerate(s):
         token_ = token.lower()
         prefix = "".join([piece.replace('##', '') for piece in t[st:ed + 1]])
-        # print(prefix, type(prefix))
+        prefix = prefix.lower()
         while token_.startswith(prefix):
+            print("token_startswith prefix")
             ed += 1
             if ed >= len(t):
                 break
-            prefix = "".join([piece.replace('##', '') for piece in t[st:ed + 1]])
+            prefix = "".join([piece.replace('##', '') for piece in t[st:ed + 1]]).lower()
             # print(prefix, type(prefix))
         if (ed - st > 1) or (sum(1 for c in token if c.isupper()) > 1) or (idx > 0):
             mapping_idx.append([(st, ed), idx])
